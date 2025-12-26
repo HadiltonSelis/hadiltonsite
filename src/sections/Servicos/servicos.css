@@ -1,0 +1,245 @@
+.secao-servicos {
+  padding: 80px 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../assets/background2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.container-servicos {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.titulo-secao {
+  text-align: center;
+  color: #282673;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.subtitulo-secao {
+  color: #282673;
+  text-align: center;
+  max-width: 800px;
+  margin: 1.3em auto 1em;
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 1.6em;
+}
+
+.texto-servicos {
+  color: #282673;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4em;
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: 1.3em;
+}
+
+.swiper-container-wrapper {
+  position: relative;
+}
+
+.servicos-swiper {
+  padding: 20px 10px 60px;
+  width: 100%;
+}
+
+.card-servico {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 2.5em 2em;
+  height: 320px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(40, 38, 115, 0.1);
+}
+
+.card-servico:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0, 0.15);
+}
+
+.icone-servico {
+  font-size: 3.5em;
+  color: #282673;
+  margin-bottom: 1.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.card-servico h3 {
+  color: #282673;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.card-servico p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1em;
+  margin: 0;
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #282673;
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  background: #282673;
+  color: #FFF;
+}
+
+.custom-swiper-button-prev {
+  left: -25px;
+}
+
+.custom-swiper-button-next {
+  right: -25px;
+}
+
+.custom-swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #282673;
+  opacity: 0.4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+@media (max-width: 1200px) {
+  .card-servico {
+    height: 300px;
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .secao-servicos {
+    min-height: auto;
+    padding: 60px 0;
+  }
+  
+  .servicos-swiper {
+    padding-bottom: 50px;
+  }
+  
+  .card-servico {
+    height: 280px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .custom-swiper-button-prev {
+    left: -15px;
+  }
+  
+  .custom-swiper-button-next {
+    right: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-secao {
+    font-size: 2em;
+  }
+  
+  .subtitulo-secao {
+    font-size: 1.4em;
+  }
+  
+  .texto-servicos {
+    font-size: 1em;
+    margin-bottom: 3em;
+  }
+  
+  .card-servico {
+    height: 250px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .icone-servico {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-servico h3 {
+    font-size: 1.2rem;
+  }
+  
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-servicos {
+    padding: 40px 0;
+  }
+  
+  .card-servico {
+    height: 220px;
+  }
+  
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    display: none !important;
+  }
+}

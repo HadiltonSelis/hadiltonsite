@@ -1,0 +1,132 @@
+.secao-home {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/heroimage1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    padding: 80px 20px 20px; /* Considera a altura do navbar fixed */
+    box-sizing: border-box;
+}
+
+.home-content {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+.texto-apresentacao {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 10px 0;
+}
+
+.nome {
+    font-size: clamp(2.5rem, 8vw, 4rem) !important;
+    font-weight: bold;
+    margin: 15px 0 !important;
+    color: #f8f8f8;
+    text-shadow: 2px 2px 4px rgba(11, 138, 217, 0.788);
+}
+
+.subtitulo h3 {
+    max-width: 100%;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    margin: 25px 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: 'lora-regular';
+}
+
+.subtitulo p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: normal;
+    margin-top: -10px;
+    line-height: 1.5;
+}
+
+.btn-sobre {
+    margin-top: 40px;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    border: 1px solid #FFF;
+    display: inline-flex;
+    background: none;
+    color: #FFF;
+    padding: 0.8em 1.5em;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-sobre:hover {
+    background-color: rgba(11, 138, 217, 0.788);
+    color: #FFF;
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 768px) {
+    .secao-home {
+        padding: 70px 15px 15px;
+    }
+    
+    .home-content {
+        padding: 15px;
+    }
+    
+    .texto-apresentacao {
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .titulo h2 {
+        margin: 5px 0;
+    }
+    
+    .nome {
+        margin: 10px 0 !important;
+    }
+    
+    .subtitulo h3 {
+        margin: 20px 0;
+        line-height: 1.4;
+    }
+    
+    .btn-sobre {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao-home {
+        padding: 60px 10px 10px;
+    }
+    
+    .texto-apresentacao {
+        letter-spacing: 0.5px;
+    }
+    
+    .subtitulo h3 {
+        margin: 15px 0;
+    }
+    
+    .btn-sobre {
+        padding: 0.7em 1.2em;
+    }
+}

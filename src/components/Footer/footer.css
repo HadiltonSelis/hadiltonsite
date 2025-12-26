@@ -1,0 +1,225 @@
+.footer{
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    position: relative;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+}
+
+.irtopo{
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #282673 0%, #5652d3 100%);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(86, 82, 211, 0.3);
+}
+
+.irtopo:hover{
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(86, 82, 211, 0.4);
+}
+
+.footer-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3,
+.footer-section h4{
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-section h3.footer-logo{
+    font-size: 1.8em;
+    font-weight: 700;
+    background: linear-gradient(135deg, #5652d3 0%, #282673 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-section h4{
+    font-size: 1.2em;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h4::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #5652d3, #282673);
+}
+
+.descricao-footer{
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.social-links{
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li{
+    margin-bottom: 12px;
+}
+
+.footer-link{
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-link::before{
+    content: '>';
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #5652d3;
+}
+
+.footer-link:hover{
+    color: #fff;
+    padding-left: 15px;
+}
+
+.footer-link:hover::before{
+    opacity: 1;
+    left: 0;
+}
+
+.contato-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b0b0b0;
+    font-size: 0.95em;
+}
+
+.contato-icon{
+    color: #5652d3;
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+
+.footer-divider{
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin: 30px 0;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-copyright p{
+    color: #b0b0b0;
+    font-size: 0.9em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    
+    .irtopo {
+        width: 45px;
+        height: 45px;
+        top: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .footer-main {
+        gap: 25px;
+    }
+    
+    .footer-copyright p {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

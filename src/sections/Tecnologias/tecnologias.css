@@ -1,0 +1,136 @@
+
+#tecnologias {
+    padding: 2em 0; 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+}
+
+.tecnologias-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tecnologias-scroll-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 10px 0; 
+}
+
+.tecnologias-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite; 
+    padding: 10px 0; 
+}
+
+.tecnologias-scroll:hover {
+    animation-play-state: paused;
+}
+
+.tecnologia-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    height: 90px; 
+    margin: 0 15px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+    padding: 10px; 
+}
+
+.tecnologia-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.tecnologia-icon {
+    font-size: 2em; 
+    margin-bottom: 8px; 
+}
+
+.tecnologia-nome {
+    font-size: 0.8rem; 
+    font-weight: 600;
+    color: #2d2d2d;
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.tecnologias-scroll-container::before,
+.tecnologias-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 80px; 
+    z-index: 2;
+}
+
+.tecnologias-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f8f9fa, transparent);
+}
+
+.tecnologias-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f8f9fa, transparent);
+}
+
+@media (max-width: 768px) {
+    .tecnologia-item {
+        min-width: 85px; 
+        height: 80px; 
+        margin: 0 10px; 
+    }
+    
+    .tecnologia-icon {
+        font-size: 1.7rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    #tecnologias {
+        padding: 1.5em 0; 
+    }
+    
+    .tecnologia-item {
+        min-width: 70px; 
+        height: 70px; 
+        margin: 0 8px;
+        padding: 8px; 
+    }
+    
+    .tecnologia-icon {
+        font-size: 1.4rem; 
+        margin-bottom: 5px; 
+    }
+    
+    .tecnologia-nome {
+        font-size: 0.7rem; 
+    }
+    
+    .tecnologias-scroll-container::before,
+    .tecnologias-scroll-container::after {
+        width: 40px; 
+    }
+}
